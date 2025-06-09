@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form>
+  <label>Name:</label>
+  <input type="text" id="name"><br>
+
+  <label>Email:</label>
+  <input type="text" id="email"><br>
+
+  <label>Phone Number:</label>
+  <input type="text" id="phone"><br>
+
+  <button type="button" onclick="handleClick()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  function handleClick() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+
+    document.getElementById("result").innerHTML =
+      `<p><strong>Name:</strong> ${name}</p>
+       <p><strong>Email:</strong> ${email}</p>
+       <p><strong>Phone Number:</strong> ${phone}</p>`;
+  }
+</script>
+
+</body>
+</html>
+
